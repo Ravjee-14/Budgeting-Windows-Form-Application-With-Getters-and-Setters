@@ -1,0 +1,76 @@
+﻿<Window x:Class="POE___GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE___GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="575" Width="900">
+    <Grid RenderTransformOrigin="0.389,0.466" Height="557" VerticalAlignment="Top">
+        <Label Content="Good Day. Welcome to the Budget Planning Application" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Label Content="Please enter the following values" HorizontalAlignment="Left" Margin="50,31,0,0" VerticalAlignment="Top" FontWeight="Normal" FontStyle="Italic" Width="182" Height="28"/>
+        <Label Content="Monthly income (Excluding deductions)" HorizontalAlignment="Left" Margin="50,67,0,0" VerticalAlignment="Top" Width="223" Height="29"/>
+        <Label Content="Tax Deductions" HorizontalAlignment="Left" Margin="50,96,0,0" VerticalAlignment="Top" Width="92" Height="28"/>
+        <Label Content="Grocery Expense" HorizontalAlignment="Left" Margin="50,124,0,0" VerticalAlignment="Top" Width="100" Height="29"/>
+        <Label Content="Lights and Water" HorizontalAlignment="Left" Margin="50,153,0,0" VerticalAlignment="Top" Width="101" Height="28"/>
+        <Label Content="Travel Costs" HorizontalAlignment="Left" Margin="50,181,0,0" VerticalAlignment="Top" Width="74" Height="29"/>
+        <Label Content="Cell phone expenses" HorizontalAlignment="Left" Margin="50,210,0,0" VerticalAlignment="Top" Width="120" Height="28"/>
+        <Label Content="Miscellaneous expenses" HorizontalAlignment="Left" Margin="50,238,0,0" VerticalAlignment="Top" Width="139" Height="29"/>
+        <TextBox x:Name="txtMonthlyIncome" HorizontalAlignment="Left" Margin="278,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="19"/>
+        <TextBox x:Name="txtTaxDeduct" HorizontalAlignment="Left" Margin="278,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="20"/>
+        <TextBox x:Name="txtGrocery" HorizontalAlignment="Left" Margin="278,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="19"/>
+        <TextBox x:Name="txtLightsAndWater" HorizontalAlignment="Left" Margin="278,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="20"/>
+        <TextBox x:Name="txtTravelCost" HorizontalAlignment="Left" Margin="278,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="19"/>
+        <TextBox x:Name="txtCellPhone" HorizontalAlignment="Left" Margin="278,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="20"/>
+        <TextBox x:Name="txtMiscellaneous" HorizontalAlignment="Left" Margin="278,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="122" Height="20"/>
+        <Button x:Name="btnGrossIncome" Content="Calculate Gross income" HorizontalAlignment="Left" Margin="227,463,0,0" VerticalAlignment="Top" Click="btnGrossIncome_Click" Width="173"/>
+
+        <RadioButton x:Name="radbtnRenting" Content="Renting" HorizontalAlignment="Left" Margin="496,70,0,0" VerticalAlignment="Top" Checked="radbtnRenting_Checked" Width="62"/>
+        <Label Content="Will you be purchasing or renting a property?" HorizontalAlignment="Left" Margin="496,31,0,0" VerticalAlignment="Top" FontStyle="Italic" Width="256"/>
+        <TextBox x:Name="txtRentExpense" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <Label x:Name="lblRentExpense" Content="Rent Expense" Visibility="Hidden" HorizontalAlignment="Left" Margin="503,90,0,0" VerticalAlignment="Top" FontWeight="Normal" Width="84"/>
+
+        <RadioButton x:Name="radbtnPurchasing" Content="Purchasing" HorizontalAlignment="Left" Margin="496,123,0,0" VerticalAlignment="Top" Checked="radbtnPurchasing_Checked" Width="81"/>
+        <Label x:Name="lblPurchasePrice" Content="Purchase Price" Visibility="Hidden" HorizontalAlignment="Left" Margin="496,149,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label x:Name="lblDeposit" Content="Deposit" Visibility="Hidden" HorizontalAlignment="Left" Margin="496,180,0,0" VerticalAlignment="Top" Width="54"/>
+        <Label x:Name="lblIntRate" Content="Interest Rate" Visibility="Hidden" HorizontalAlignment="Left" Margin="496,206,0,0" VerticalAlignment="Top" Width="81"/>
+        <Label x:Name="lblRepayment" Content="Repayment period (240 - 360 months)" Visibility="Hidden" HorizontalAlignment="Left" Margin="496,237,0,0" VerticalAlignment="Top" Width="221"/>
+        <TextBox x:Name="txtPurchasePrice" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="txtDeposit" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="txtInterestRate" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,215,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="txtRepaymentPeriod" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125"/>
+
+        <Label Content="Will you be purchasing a Car?" HorizontalAlignment="Left" Margin="496,282,0,0" VerticalAlignment="Top" FontStyle="Italic" Width="173"/>
+        <CheckBox x:Name="chkboxYes" Content="Yes" HorizontalAlignment="Left" Margin="685,288,0,0" VerticalAlignment="Top" Width="39" Checked="chkboxYes_Checked"/>
+        <CheckBox x:Name="chkboxNo" Content="No" HorizontalAlignment="Left" Margin="737,287,0,0" VerticalAlignment="Top" Width="37" Checked="chkboxNo_Checked"/>
+        <Label x:Name="lblVehMakeAndModel" Visibility="Hidden" Content="Make and Model of the car" HorizontalAlignment="Left" Margin="496,313,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblVehPurchase" Visibility="Hidden" Content="Vehice Purchase Price" HorizontalAlignment="Left" Margin="496,338,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblVehDeposit" Visibility="Hidden" Content="Total deposit amount" HorizontalAlignment="Left" Margin="496,366,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblVehIntRate" Visibility="Hidden" Content="Interest rate" HorizontalAlignment="Left" Margin="496,392,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblVehPremium" Visibility="Hidden" Content="Estimated Insurance Premium" HorizontalAlignment="Left" Margin="496,418,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVehMake" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,317,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtVehPurchasePrice" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtVehDeposit" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtVehIntRate" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtVehInsurance" Visibility="Hidden" HorizontalAlignment="Left" Margin="748,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+
+        <Label Content="Optional Saving" HorizontalAlignment="Left" Margin="50,284,0,0" VerticalAlignment="Top" FontStyle="Italic" Height="31"/>
+        <Label Content="Savings Refrence" HorizontalAlignment="Left" Margin="50,323,0,0" VerticalAlignment="Top" Height="31"/>
+        <Label Content="Savings Amount" HorizontalAlignment="Left" Margin="50,353,0,0" VerticalAlignment="Top" Height="31"/>
+        <Label Content="Savings Period (Years)" HorizontalAlignment="Left" Margin="50,382,0,0" VerticalAlignment="Top" Height="31"/>
+        <Label Content="Interest Rate" HorizontalAlignment="Left" Margin="50,413,0,0" VerticalAlignment="Top" Height="31"/>
+        <TextBox x:Name="txtSavingRef" HorizontalAlignment="Left" Margin="278,328,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22"/>
+        <TextBox x:Name="txtSavingAmount" HorizontalAlignment="Left" Margin="278,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox x:Name="txtSavingPeriod" HorizontalAlignment="Left" Margin="278,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <TextBox x:Name="txtSavingIntRate" HorizontalAlignment="Left" Margin="278,418,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="21"/>
+        <Button x:Name="btnSavings" Content="Calculate Savings" HorizontalAlignment="Left" Margin="26,463,0,0" VerticalAlignment="Top" Width="173" Click="btnSavings_Click"/>
+
+        <Button x:Name="btnRenting" Visibility="Hidden" Content="Calculate Gross Income Minus Rent Expense" HorizontalAlignment="Left" Margin="496,463,0,0" VerticalAlignment="Top" Width="312" Click="btnRenting_Click"/>
+        <Button x:Name="btnMonthlyRepay" Visibility="Hidden" Content="Calculate Gross Income Minus Monthly Repayment" HorizontalAlignment="Left" Margin="497,488,0,0" VerticalAlignment="Top" Width="313" Click="btnMonthlyRepay_Click"/>
+        <Button x:Name="btnVehRepayment" Visibility="Hidden" Content="Calculate Monthly Repayment on the Vehicle" HorizontalAlignment="Left" Margin="497,513,0,0" VerticalAlignment="Top" Width="313" Click="btnVehRepayment_Click"/>
+        <Button x:Name="btnCalcAll" Content="Calculate All" HorizontalAlignment="Left" Margin="26,503,0,0" VerticalAlignment="Top" Width="173" Click="btnCalcAll_Click"/>
+        <Button x:Name="btnSave" Content="Save to a File" HorizontalAlignment="Left" Margin="227,503,0,0" VerticalAlignment="Top" Width="173" Click="btnSave_Click"/>
+        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="971,162,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
